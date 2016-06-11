@@ -1,0 +1,27 @@
+<form role="form" ng-submit='sendMessage()'>
+	<fieldset>
+		<div class="form-group has-success has-feedback">
+		  <label>متن پیام جهت ارسال</label>
+		  <input type="text"
+				 ng-model="MessageModel"
+				 class="form-control"
+				 placeholder="" required>
+		</div>
+	</fieldset>
+	<hr>
+
+	<button class="btn btn-default btn-block">
+	  ارسال
+	</button>
+
+</form>
+				
+				<hr />
+<table class="table table-bordered table-striped table-condensed">
+	<tr>
+	<th class="text-center">پیام های ارسال شده</th>
+	</tr>
+	<tr ng-repeat="message in messages">
+		<td><span class="text-info">{{message.DateTime}}</span>:  <span>{{message.Text}}</span></td>
+	</tr>
+</table>

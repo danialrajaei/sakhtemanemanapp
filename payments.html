@@ -1,0 +1,16 @@
+<table class="table table-bordered table-striped table-condensed">
+	<tr>
+		<th class="text-center">شماره پیگیری تراکنش</th>
+		<th class="text-center">تاریخ</th>
+		<th class="text-center">واریز به صندوق</th>
+		<th class="text-center">توضیحات</th>
+		<th class="text-center">نوع پرداخت</th>
+	</tr>
+	<tr ng-repeat="item in payments">
+		<td class="text-center">{{item.ID}}</td>
+		<td class="text-center">{{item.DateTime}}</td>
+		<td class="text-center">{{item.Value}}</td>
+		<td class="text-center">{{item.Description}}</td>
+		<td class="text-center"><span>{{item.PaymentType==0?'نقدی':'کارت به کارت'}}</span></td>
+	</tr>
+</table>

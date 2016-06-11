@@ -1,0 +1,14 @@
+﻿<table class="table table-bordered table-striped table-condensed">
+			   <tr>
+				<th class="text-center">شماره واحد</th>
+				<th class="text-center">ساکن</th>
+				<th class="text-center">بدهی</th>
+				<th class="text-center">طلب</th>
+			   </tr>
+				<tr ng-repeat="item in apartmentsAtG">
+					<td>{{item.ApartmentNumber}}</td>
+					<td>{{item.Title}}</td>
+					<td class="text-danger">{{item.Debtor}}</td>
+					<td class="text-success">{{item.Creditor}}</td>
+				</tr>
+</table>

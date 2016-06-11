@@ -1,0 +1,26 @@
+﻿<h1 class="text-center loginTitle">ساختمان من</h1>
+<form role="form" ng-submit='login()' ng-model="loginModel">
+<fieldset>
+<legend>ورود</legend>
+<div class="form-group col-xs-8 col-xs-offset-2">
+  <label>نام کاربری</label>
+  <input type="text"
+		 ng-model="loginModel.username"
+		 class="form-control"
+		 placeholder="نام کاربری را وارد کنید" required>
+</div>
+
+<div class="form-group  col-xs-8 col-xs-offset-2">
+  <label>رمز عبور</label>
+  <input type="password" ng-model="loginModel.password" 
+		 class="form-control"
+		 placeholder="رمز عبور را وارد کنید" required>
+</div>
+</fieldset>
+<hr>
+<div class="col-xs-10 col-xs-offset-1">
+<button class="btn btn-default btn-block">
+ورود
+</button>
+</div>
+</form>

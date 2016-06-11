@@ -1,0 +1,16 @@
+<table class="table table-bordered table-striped table-condensed">
+	<tr>
+		<th class="text-center">شماره پیگیری تراکنش</th>
+		<th class="text-center">تاریخ</th>
+		<th class="text-center">واریز به صندوق</th>
+		<th class="text-center">بدهی به صندوق</th>
+		<th class="text-center">توضیحات</th>
+	</tr>
+	<tr ng-repeat="tran in trans">
+		<th class="text-center">{{tran.ID}}</th>
+		<th class="text-center">{{tran.DateTime}}</th>
+		<th class="text-center">{{tran.Debtor}}</th>
+		<th class="text-center">{{tran.Creditor}}</th>
+		<th class="text-center">{{tran.Description}}</th>
+	</tr>
+</table>

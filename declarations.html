@@ -1,0 +1,20 @@
+<table class="table table-bordered table-striped table-condensed">
+<tr>
+<th class="text-center">عنوان</th>
+<th class="text-center">تاریخ</th>
+<th class="text-center">فایل</th>
+<th class="text-center"></th>
+</tr>
+<tr ng-repeat="item in declarations">
+	<td>{{item.Title}}</td>
+	<td>{{item.DateTime}}</td>
+	<td><a href="{{item.Filename}}">دریافت فایل</a></td>
+	<td><a href="" ui-turn-on="modal{{$index}}">مشاهده کامل</a></td>
+</tr>
+</table>
+
+<div ui-content-for="modals">
+  <div ng-repeat="item in declarations">
+	{{item.Description}}
+  </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="col-xs-8 col-xs-offset-2">
+			 <div ui-state="activeTab" default="1">
+
+			  <ul class="nav nav-tabs">
+				<li ui-class="{'active': activeTab == 1}">
+				  <a ui-set="{'activeTab': 1}">نقدی</a>
+				</li>
+				<li ui-class="{'active': activeTab == 2}">
+				  <a ui-set="{'activeTab': 2}">کارت به کارت</a>
+				</li>
+			  </ul>
+
+			  <div ui-if="activeTab == 1">
+				<h3 class="page-header">نقدی</h3>
+				<form role="form" ng-submit='paySubmit(0)'>
+					<fieldset>
+						<div class="form-group has-success has-feedback">
+						  <label>تاریخ</label>
+						  <input type="text"
+								 ng-model="paymentModel.DateTime"
+								 class="form-control"
+								 placeholder="مثال 1395/01/01" required>
+						</div>
+
+						<div class="form-group has-success has-feedback">
+						  <label>مبلغ</label>
+						  <input type="number" 
+								 class="form-control"
+								 ng-model="paymentModel.Value"
+								 placeholder="" required>
+						</div>
+
+						<div class="form-group">
+						  <label>توضیح</label>
+						  <input type="text" 
+								 ng-model="paymentModel.Description"
+								 class="form-control"
+								 placeholder="">
+						</div>
+					</fieldset>
+					<hr>
+
+					<button class="btn btn-default btn-block">
+					  ثبت
+					</button>
+
+				</form>
+			  </div>
+
+			  <div ui-if="activeTab == 2">
+				<h3 class="page-header">کارت به کارت</h3>
+				<form role="form" ng-submit='paySubmit(1)'>
+					<fieldset>
+						<div class="form-group has-success has-feedback">
+						  <label>تاریخ</label>
+						  <input type="text"
+								 ng-model="paymentModel.DateTime"
+								 class="form-control"
+								 placeholder="مثال 1395/01/01" required>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+						  <label>4 رقم آخر کارت</label>
+						  <input type="text"
+								 ng-model="paymentModel.PaymentAttachment"
+								 class="form-control"
+								 placeholder="" required>
+						</div>
+						
+						<div class="form-group has-success has-feedback">
+						  <label>مبلغ</label>
+						  <input type="number" 
+								 class="form-control"
+								 ng-model="paymentModel.Value"
+								 placeholder="" required>
+						</div>
+
+						<div class="form-group">
+						  <label>توضیح</label>
+						  <input type="text" 
+								 ng-model="paymentModel.Description"
+								 class="form-control"
+								 placeholder="">
+						</div>
+					</fieldset>
+					<hr>
+
+					<button class="btn btn-default btn-block">
+					  ثبت
+					</button>
+
+				</form>
+			  </div>
+			 </div>
+			 </div>
+			 
