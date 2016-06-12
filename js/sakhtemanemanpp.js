@@ -48,8 +48,7 @@ app.controller('loginController', function($rootScope,$scope,$http) {
 				else
 				{
 					$('.alert-danger').show().addClass('bounceInDown');
-					//$rootScope.error='اشکال در برقراری ارتباط لطفاً مجدداً تلاش کنید';
-					$rootScope.error=reponse.data.error;
+					$rootScope.error='اشکال در برقراری ارتباط لطفاً مجدداً تلاش کنید)(کد : '+@response.statuscode+')';
 				}
 			  });
 		};
