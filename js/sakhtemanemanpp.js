@@ -26,7 +26,6 @@ app.run(function($rootScope){
 
 app.controller('loginController', function($rootScope,$scope,$http) {
 	$rootScope.ShowSideBar = false;
-	return;
 	$scope.loginModel = {grant_type:"password",username:"",password:""};
     $scope.login=function(){
 		$rootScope.loading = true;
@@ -59,10 +58,9 @@ app.controller('indexController', function($scope,$http){
     var token = window.localStorage.getItem("token");
 	var headers={};
 	console.log("load already");
-	return;
 	if(token==null)
 	{
-		window.location.replace('/#login');
+		window.location.replace('#/login');
 	}
 	else
 	{
@@ -86,7 +84,7 @@ app.controller('indexController', function($scope,$http){
 			}, function errorCallback(response) {
 				$rootScope.loading = false;
 				window.localStorage.clear();
-				window.location.replace('/#login');
+				window.location.replace('#/login');
 			});
 	}
 	});
@@ -96,7 +94,7 @@ app.controller('indexController', function($scope,$http){
 		var headers={};
 		if(token==null)
 		{
-			window.location.replace('/#login');
+			window.location.replace('#/login');
 		}
 		else
 		{
@@ -110,7 +108,7 @@ app.controller('indexController', function($scope,$http){
 			}).then(function successCallback(response) {$rootScope.loading = false;}, function errorCallback(response) {
 				$rootScope.loading = false;
 				window.localStorage.clear();
-				window.location.replace('/#login');
+				window.location.replace('#/login');
 				});
 		};
 		$scope.paymentModel = {PaymentType:0,DateTime:'',Description:'',PaymentAttachment:'',Value:0};
@@ -131,7 +129,7 @@ app.controller('indexController', function($scope,$http){
 		var headers={};
 		if(token==null)
 		{
-			window.location.replace('/#login');
+			window.location.replace('#/login');
 		}
 		else
 		{
@@ -146,7 +144,7 @@ app.controller('indexController', function($scope,$http){
 			}, function errorCallback(response) {
 				$rootScope.loading = false;
 				window.localStorage.clear();
-				window.location.replace('/#login');
+				window.location.replace('#/login');
 				});
 		}
 	$scope.loadMessages = function(){
@@ -179,7 +177,7 @@ app.controller('indexController', function($scope,$http){
 		var headers={};
 		if(token==null)
 		{
-			window.location.replace('/#login');
+			window.location.replace('#/login');
 		}
 		else
 		{
@@ -202,7 +200,7 @@ app.controller('indexController', function($scope,$http){
 			}, function errorCallback(response) {
 				$rootScope.loading = false;
 				window.localStorage.clear();
-				window.location.replace('/#login');
+				window.location.replace('#/login');
 				});
 		}
 	});
@@ -212,7 +210,7 @@ app.controller('indexController', function($scope,$http){
 		var headers={};
 		if(token==null)
 		{
-			window.location.replace('/#login');
+			window.location.replace('#/login');
 		}
 		else
 		{
@@ -235,7 +233,7 @@ app.controller('indexController', function($scope,$http){
 			}, function errorCallback(response) {
 				$rootScope.loading = false;
 				window.localStorage.clear();
-				window.location.replace('/#login');
+				window.location.replace('#/login');
 				});
 		}
 	});
@@ -245,7 +243,7 @@ app.controller('indexController', function($scope,$http){
 		var headers={};
 		if(token==null)
 		{
-			window.location.replace('/#login');
+			window.location.replace('#/login');
 		}
 		else
 		{
@@ -268,7 +266,7 @@ app.controller('indexController', function($scope,$http){
 			}, function errorCallback(response) {
 				$rootScope.loading = false;
 				window.localStorage.clear();
-				window.location.replace('/#login');
+				window.location.replace('#/login');
 				});
 		}
 	});
@@ -276,5 +274,5 @@ app.controller('indexController', function($scope,$http){
 app.controller('logoutController', function(){
 	$rootScope.loading = false;
 	window.localStorage.clear();
-	window.location.replace('/#login');
+	window.location.replace('#/login');
 });
