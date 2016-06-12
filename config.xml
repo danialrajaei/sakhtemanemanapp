@@ -22,7 +22,7 @@
         permission on your app, which PhoneGap requires.
     -->
     <preference name="permissions"                value="none"/>
-
+	<feature name="http://api.phonegap.com/1.0/network"/>
     <!-- Customize your app and platform with the preference element. -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
@@ -63,6 +63,7 @@
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
+	<plugin name="cordova-plugin-whitelist" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->
