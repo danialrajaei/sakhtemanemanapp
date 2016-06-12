@@ -57,6 +57,8 @@ app.controller('loginController', function($rootScope,$scope,$http) {
 app.controller('indexController', function($scope,$http){
     var token = window.localStorage.getItem("token");
 	var headers={};
+	console.log("load already");
+	return;
 	if(token==null)
 	{
 		window.location.replace('/#login');
