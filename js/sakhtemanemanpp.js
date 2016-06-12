@@ -27,9 +27,9 @@ app.run(function($rootScope){
 app.controller('loginController', function($rootScope,$scope,$http) {
 	$rootScope.ShowSideBar = false;
 	$scope.loginModel = {grant_type:"password",username:"",password:""};
+	return;
     $scope.login=function(){
 		$rootScope.loading = true;
-		return;
 		$http({
 			  method: 'POST',
 			  url: masterUrl+'/Token',
