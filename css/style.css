@@ -164,9 +164,9 @@ h1, h2, h3, h4, h5, h6 { font-family: BTitrBold; }
 
 body{direction:rtl; text-align:right; font-family:BYekan;}
 
-.undercover{ background: url(/img/undercover.png) repeat-x; background-size:contain; position:absolute; bottom:0; height:50px; width:100%; z-index:99;}
+.undercover{ background: url(../img/undercover.png) repeat-x; background-size:contain; position:absolute; bottom:0; height:50px; width:100%; z-index:99;}
 
-#content {background: url(/img/back.jpg) repeat-x #fff; width:100%; padding-top:10%; padding-bottom:50px;}
+#content {background: url(../img/back.jpg) repeat-x #fff; width:100%; padding-top:10%; padding-bottom:50px;}
 
 .loginTitle{color:#34495e;}
 
